@@ -1,0 +1,19 @@
+version: '3.1'
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+      MYSQL_ROOT_HOST: postServer    
+      POSTGRES_USER: jdajunior      
+    volumes:      
+     - /datav:/data/db     
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8084:8080
+    
+
+   
